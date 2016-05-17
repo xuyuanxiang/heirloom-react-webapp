@@ -24,7 +24,6 @@ import {push, replace, go, goBack, goForward} from 'react-router-redux';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    console.log('App', props);
     // props.dispatch(init());
     // props.dispatch(push('/about'));
   }

@@ -28,7 +28,10 @@ import reducers from './reducers'
 import App from './components/App';
 import About from './components/About';
 
-const createStoreWithMiddleware = applyMiddleware(logger, routerMiddleware(browserHistory))(createStore);
+const createStoreWithMiddleware =
+  process.env.NODE_ENV === 'production' ?
+    applyMiddleware(routerMiddleware(browserHistory))(createStore) :
+    applyMiddleware(logger, routerMiddleware(browserHistory))(createStore);
 const store = createStoreWithMiddleware(reducers);
 const history = syncHistoryWithStore(browserHistory, store);
 
