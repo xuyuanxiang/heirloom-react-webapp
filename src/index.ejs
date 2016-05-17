@@ -4,12 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><%= htmlWebpackPlugin.options.title %></title>
-  <link href="<%= htmlWebpackPlugin.options.css %>" rel="stylesheet">
 </head>
 <body>
 <div id="<%= htmlWebpackPlugin.options.appMountId %>"></div>
-<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
-<script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
-<% } %>
 </body>
 </html>

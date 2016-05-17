@@ -27,6 +27,7 @@ import {logger} from './middlewares';
 import reducers from './reducers'
 import App from './components/App';
 import About from './components/About';
+import './index.scss';
 
 const createStoreWithMiddleware =
   process.env.NODE_ENV === 'production' ?
